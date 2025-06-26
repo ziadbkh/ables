@@ -1,0 +1,19 @@
+# see https://github.com/ELIXIR-Belgium/elixir-toolkit-theme
+
+# List of contributors
+#
+# reference maintainers/contributors by their name used in contributors metadata section on the pages.
+
+- name: event name Z
+  day: 01
+  month: Jul
+  year: 2025
+  location: Online
+  description: regular meeting for ABLeS users
+
+- name: pre meeting
+  day: 05
+  month: Nov
+  year: 2024
+  location: Online
+  description: ANother regular meeting for ABLeS users
