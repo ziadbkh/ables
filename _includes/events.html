@@ -16,14 +16,14 @@
                 <div class="event-item">
                     <div class="event-date-block">
                         <div class="event-date">
-                            <div class="event-day">{{ event.day | escape }}</div>
-                            <div class="event-month">{{ event.month | escape }}</div>
-                            <div class="event-year">{{ event.year | escape }}</div>
+                            <div class="event-day">{{ event.date | date: "%d" | escape }}</div>
+                            <div class="event-month">{{ event.date | date: "%b" | escape }}</div>
+                            <div class="event-year">{{ event.date | date: "%Y"  | escape }}</div>
                         </div>
                         <div class="event-content">
                             <h3 class="event-title">{{ event.name | escape }}</h3>
                             <p class="event-location">👥 {{ event.location | escape }}</p>
-                            <p class="event-description">{{ event.description | markdownify }}</p>
+                            <p class="event-description">{{ event.description }}</p>
                         </div>
                         <div class="event-arrow">→</div>
                     </div>
@@ -97,7 +97,7 @@
     
     .events-container {
         max-width: 800px;
-        padding: 30px 20px;
+        /*padding: 30px 20px;*/
     }
     
     .events-section {
