@@ -5,6 +5,7 @@
 # reference maintainers/contributors by their name used in contributors metadata section on the pages.
 
 - name: event name Z
+  date: 1
   day: 01
   month: Jul
   year: 2025
@@ -12,6 +13,7 @@
   description: regular meeting for ABLeS users
 
 - name: pre meeting
+  date: 2
   day: 05
   month: Nov
   year: 2024
