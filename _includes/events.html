@@ -1,10 +1,11 @@
 <div class="events">
 <div class="events-container">
     <div class="events-section">
-        <div class="events-header">
+        <!-- <div class="events-header">
             <h2 class="events-title">Events</h2>
             <p class="events-subtitle">Don't miss what's coming up</p>
         </div>
+         -->
         <!-- Upcoming Events -->
         <div class="events-category">
             <h3 class="category-title">Upcoming</h3>
@@ -22,9 +23,7 @@
                         <div class="event-content">
                             <h3 class="event-title">{{ event.name | escape }}</h3>
                             <p class="event-location">👥 {{ event.location | escape }}</p>
-                            <p class="event-description">
-                            {{ event.description | markdownify }}
-                            </p>
+                            <p class="event-description">{{ event.description | markdownify }}</p>
                         </div>
                         <div class="event-arrow">→</div>
                     </div>
@@ -98,8 +97,7 @@
     
     .events-container {
         max-width: 800px;
-        margin: 0 auto;
-        padding: 60px 40px;
+        padding: 30px 20px;
     }
     
     .events-section {
@@ -164,7 +162,7 @@
     
     .event-item {
         border-bottom: 1px solid #e0e0e0;
-        padding: 40px 0;
+        padding: 5px 0;
         transition: all 0.3s ease;
         cursor: pointer;
     }
