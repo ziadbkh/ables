@@ -8,7 +8,7 @@
         <!-- Upcoming Events -->
         <div class="events-category">
             <h3 class="category-title">Upcoming</h3>
-            {%- assign events = site.data.events | sort: "date" %}
+            {%- assign events = site.data.events %}
             {%- assign count = 0 %}
                 <div class="events-list">
                 {%- for event in events reversed%}
