@@ -23,16 +23,7 @@
                             <h3 class="event-title">{{ event.name | escape }}</h3>
                             <p class="event-location">👥 {{ event.location | escape }}</p>
                             <p class="event-description">
-                            {%- if event.description %}
-                            {%- assign word_count = event.description | split: " " | size %}
-                            {%- if include.truncate == true and word_count > 40 %}
-                            <p>
-                                View description
-                            </p>
-                            {%- else %}
                             {{ event.description | markdownify }}
-                            {%- endif %}
-                            {%- endif %}
                         </div>
                         <div class="event-arrow">→</div>
                     </div>
