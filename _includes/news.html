@@ -16,7 +16,7 @@
                     <div class="news-item" onclick="redirectToNews('{{ new.url}}')">
                         <div class="news-header">
                             <h3 class="news-title">{{ new.name | escape }}</h3>
-                            <div class="news-date">{{ event.date | date: "%b %d, %Y" }}</div>
+                            <div class="news-date">{{ new.date | date: "%b %d, %Y" }}</div>
                         </div>
                         <div class="news-projects">
                             {% if new.participants %}
