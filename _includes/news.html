@@ -8,7 +8,7 @@
             </div>
              -->
             <div class="news-category">
-                <h3 class="category-title">Recent</h3>
+                <!--<h3 class="category-title">Recent</h3>-->
                 {%- assign news = site.data.news | sort: 'date' %}
                 {%- assign count = 0 %}
                 <div class="news-list">
@@ -16,7 +16,7 @@
                     <div class="news-item" onclick="redirectToNews('{{ new.url}}')">
                         <div class="news-header">
                             <h3 class="news-title">{{ new.name | escape }}</h3>
-                            <div class="news-date">{{ new.date | escape }}</div>
+                            <div class="news-date">{{ event.date | date: "%b" | escape }} {{ event.date | date: "%d" | escape }}, {{ event.date | date: "%Y" | escape }}</div>
                         </div>
                         <div class="news-projects">
                             {% if new.participants %}
