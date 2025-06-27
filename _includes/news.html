@@ -1,0 +1,306 @@
+<div class="news">
+    <div class="events-container">
+        <!-- News Section -->
+        <div class="news-section">
+            <!--<div class="events-header">
+                <h2 class="events-title">News</h2>
+                <p class="events-subtitle">Latest updates and announcements</p>
+            </div>
+             -->
+            <div class="news-category">
+                <h3 class="category-title">Recent</h3>
+                <div class="news-list">
+                    <div class="news-item" onclick="redirectToNews('product-launch-2025')">
+                        <div class="news-header">
+                            <h3 class="news-title">Product Launch Announcement</h3>
+                            <div class="news-date">Jan 15, 2025</div>
+                        </div>
+                        <div class="news-projects">
+                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('mobile-app')">Mobile App</span>
+                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('web-platform')">Web Platform</span>
+                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('api-v2')">API v2.0</span>
+                        </div>
+                        <div class="news-arrow">↗</div>
+                    </div>
+                    
+                    <div class="news-item" onclick="redirectToNews('security-update-dec-2024')">
+                        <div class="news-header">
+                            <h3 class="news-title">Security Enhancement Update</h3>
+                            <div class="news-date">Dec 28, 2024</div>
+                        </div>
+                        <div class="news-projects">
+                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('authentication')">Authentication</span>
+                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('data-protection')">Data Protection</span>
+                        </div>
+                        <div class="news-arrow">↗</div>
+                    </div>
+                    
+                    <div class="news-item" onclick="redirectToNews('community-milestone-2024')">
+                        <div class="news-header">
+                            <h3 class="news-title">Community Milestone Reached</h3>
+                            <div class="news-date">Dec 20, 2024</div>
+                        </div>
+                        <div class="news-projects">
+                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('community-portal')">Community Portal</span>
+                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('user-engagement')">User Engagement</span>
+                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('feedback-system')">Feedback System</span>
+                        </div>
+                        <div class="news-arrow">↗</div>
+                    </div>
+                    
+                    <div class="news-item" onclick="redirectToNews('partnership-announcement-2024')">
+                        <div class="news-header">
+                            <h3 class="news-title">Strategic Partnership Announcement</h3>
+                            <div class="news-date">Dec 10, 2024</div>
+                        </div>
+                        <div class="news-projects">
+                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('integration-hub')">Integration Hub</span>
+                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('third-party-apis')">Third-party APIs</span>
+                        </div>
+                        <div class="news-arrow">↗</div>
+                    </div>
+                    
+                    <div class="news-item" onclick="redirectToNews('performance-improvements-2024')">
+                        <div class="news-header">
+                            <h3 class="news-title">Performance Improvements Released</h3>
+                            <div class="news-date">Nov 25, 2024</div>
+                        </div>
+                        <div class="news-projects">
+                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('backend-optimization')">Backend Optimization</span>
+                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('database-upgrade')">Database Upgrade</span>
+                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('caching-system')">Caching System</span>
+                        </div>
+                        <div class="news-arrow">↗</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.4;
+            min-height: 100vh;
+        }
+        
+        .events-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px 40px;
+        }
+        
+        .news-section {
+            position: relative;
+        }
+        
+        .events-header {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .events-title {
+            font-size: clamp(2rem, 6vw, 3rem);
+            font-weight: 300;
+            letter-spacing: -0.01em;
+            margin-bottom: 5px;
+            color: #2d2d2d;
+        }
+        
+        .events-subtitle {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 400;
+        }
+        
+        .news-category {
+            margin-bottom: 30px;
+        }
+        
+        .category-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .category-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 18px;
+            background: #ff6b6b;
+            border-radius: 2px;
+        }
+        
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        
+        .news-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        
+        .news-item:hover {
+            background: #f8f8f8;
+            transform: translateX(-10px);
+            padding-left: 20px;
+        }
+        
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 15px;
+        }
+        
+        .news-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2d2d2d;
+            line-height: 1.2;
+            flex: 1;
+        }
+        
+        .news-date {
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: 500;
+            white-space: nowrap;
+            background: #f0f0f0;
+            padding: 3px 8px;
+            border-radius: 10px;
+        }
+        
+        .news-projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 0;
+        }
+        
+        .project-tag {
+            background: #ff6b6b;
+            color: white;
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-weight: 500;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .project-tag:hover {
+            background: #ff5252;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+        }
+        
+        .news-arrow {
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: #ff6b6b;
+            font-size: 1.2rem;
+        }
+        
+        .news-item:hover .news-arrow {
+            opacity: 1;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .events-container {
+                padding: 30px 20px;
+            }
+            
+            .news-header {
+                gap: 10px;
+            }
+            
+            .news-title {
+                font-size: 1.1rem;
+            }
+            
+            .news-date {
+                font-size: 0.75rem;
+                padding: 2px 6px;
+            }
+            
+            .project-tag {
+                font-size: 0.7rem;
+                padding: 2px 6px;
+            }
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #ff6b6b;
+            border-radius: 4px;
+        }
+    </style>
+
+    <script>
+        function redirectToNews(newsId) {
+            // Open news article in new tab
+            window.open(`/news/${newsId}`, '_blank');
+            
+            // Alternative: redirect to news page with query parameter
+            // window.open(`/news-details.html?id=${newsId}`, '_blank');
+        }
+        
+        function redirectToProject(projectId) {
+            // Redirect to project page
+            window.location.href = `/project/${projectId}`;
+            
+            // Alternative options:
+            // window.open(`/project/${projectId}`, '_blank'); // Open in new tab
+            // window.location.href = `/project-details.html?id=${projectId}`; // With query parameter
+        }
+    </script>
+</div>
