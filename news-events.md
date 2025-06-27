@@ -9,6 +9,8 @@ toc: false
 
 ## News from ABLeS
 
+{% include news.html %}
+
 <br/>
 
 <div style="width: 100%; margin: auto;">
