@@ -77,26 +77,6 @@
         </div>
     </div>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #ffffff;
-            color: #1a1a1a;
-            line-height: 1.4;
-            min-height: 100vh;
-        }
-        
-        .events-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 30px 40px;
-        }
-        
         .news-section {
             position: relative;
         }
@@ -122,29 +102,6 @@
         
         .news-category {
             margin-bottom: 30px;
-        }
-        
-        .category-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #ff6b6b;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            position: relative;
-            padding-left: 20px;
-        }
-        
-        .category-title::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 4px;
-            height: 18px;
-            background: #ff6b6b;
-            border-radius: 2px;
         }
         
         .news-list {
@@ -240,49 +197,6 @@
             opacity: 1;
         }
         
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .events-container {
-                padding: 30px 20px;
-            }
-            
-            .news-header {
-                gap: 10px;
-            }
-            
-            .news-title {
-                font-size: 1.1rem;
-            }
-            
-            .news-date {
-                font-size: 0.75rem;
-                padding: 2px 6px;
-            }
-            
-            .project-tag {
-                font-size: 0.7rem;
-                padding: 2px 6px;
-            }
-        }
-        
-        /* Smooth scroll behavior */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: #ff6b6b;
-            border-radius: 4px;
-        }
     </style>
 
     <script>
