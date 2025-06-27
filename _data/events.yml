@@ -4,13 +4,14 @@
 #
 # reference maintainers/contributors by their name used in contributors metadata section on the pages.
 
-- name: event name Z
+- name: ABLeS user group meeting
   date: 2025-07-01
   location: Online
-  description: regular meeting for ABLeS users
-  url: https://github.com/ELIXIR-Belgium/elixir-toolkit-theme
-- name: pre meeting
-  date: 2024-11-05
+  description: Join us for the upcoming ABLeS User Group Meeting, featuring updates from ABLeS team, NCI and Pawsey, and presentations from three ABLeS-supported researchers.
+  url: https://docs.google.com/document/d/1U3gn5uE_2M4RN4LR_m93q52ME_T6Oaz2loWTE_3hOt0
+
+- name: ABLeS user group meeting
+  date: 2024-12-03
   location: Online
-  description: ANother regular meeting for ABLeS users
-  url: https://australianbiocommons.github.io/ables
+  description: The inaugural ABLeS User Group Meeting brought together researchers from across Australia to share how they use ABLeS resources, with project talks, facility updates, and lively discussion.
+  url: https://www.biocommons.org.au/news/ables-user-group-meetings
