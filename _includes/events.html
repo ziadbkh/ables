@@ -13,7 +13,7 @@
                 {%- assign count = 0 %}
                 <div class="events-list">
                     {%- for event in events reversed%}
-                    <div class="event-item">
+                    <div class="event-item" onclick="redirectToEvent('{{ event.url}}')">
                         <div class="event-date-block">
                             <div class="event-date">
                                 <div class="event-day">{{ event.date | date: "%d" | escape }}</div>
@@ -56,7 +56,7 @@
             <div class="events-category past-events">
                 <h3 class="category-title">Past</h3>
                 <div class="events-list">
-                    <div class="event-item">
+                    <div class="event-item" >
                         <div class="event-date-block">
                             <div class="event-date">
                                 <div class="event-day">10</div>
@@ -106,11 +106,15 @@
             line-height: 1.4;
             min-height: 100vh;
         }
+
+        .events{
+            display: block;
+        };
         
         .events-container {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 30px 40px;
+            margin: 0 0;
+            padding: 3px 4px;
         }
         
         .events-section {
