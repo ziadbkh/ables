@@ -1,0 +1,56 @@
+# see https://github.com/ELIXIR-Belgium/elixir-toolkit-theme
+
+# List of news
+
+- name: Australian palaeoenvironments and biodiversity to be reconstructed through metagenomic analysis of sedimentary ancient DNA by national collaboration with Indigenous partners
+  url: https://www.biocommons.org.au/news/ciehf
+  date: Mar 31, 2025
+
+- name: Knowledge sharing enABLeS computational research across the life sciences
+  url: https://www.biocommons.org.au/news/ables-user-group-meetings
+  date: Mar 31, 2025
+
+- name: Supercomputing access powers development of a new multi-omics resource
+  url: https://www.biocommons.org.au/news/ables-icgrc
+  date: Nov 29, 2024
+
+- name: Supercomputing access powers paediatric research
+  url: https://www.biocommons.org.au/news/thekids-ables
+  date: Aug 29, 2024
+  participants:
+    - name: Grace Tavelli
+      url: https://www.kidsresearch.org.au/our-researchers/grace-tavelli
+
+- name: Latest tech unlocks deep sea mysteries hidden in museum collections
+  url: https://www.biocommons.org.au/news/deep-sea-ables
+  date: May 29, 2024
+  participants:
+    - name: Dr. Jane Smith
+      url: https://example.org/researchers/jane-smith
+    - name: Museum Marine Team
+      url: https://examplemuseum.org/marine
+
+- name: Latest tech unlocks deep sea mysteries hidden in museum collections
+  url: https://www.biocommons.org.au/news/ables-webinar2024
+  date: Feb 29, 2024
+  participants:
+    - name: Webinar Host Team
+      url: https://www.biocommons.org.au/events/ables-webinar2024
+
+- name: Creative collisions: Bio Day a hit at Supercomputing Asia 2024
+  url: https://www.biocommons.org.au/news/sca2024-wrap
+  date: Feb 27, 2024
+  participants:
+    - name: BioCommons Events Team
+      url: https://www.biocommons.org.au/about
+    - name: Supercomputing Asia Organisers
+      url: https://www.sc-asia.org/
+
+- name: National collaboration advances computing power for bioinformatics
+  url: https://www.biocommons.org.au/news/pawsey-access
+  date: May 30, 2023
+  participants:
+    - name: Pawsey Supercomputing Centre
+      url: https://pawsey.org.au/
+    - name: NCI Australia
+      url: https://nci.org.au/

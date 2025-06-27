@@ -9,69 +9,27 @@
              -->
             <div class="news-category">
                 <h3 class="category-title">Recent</h3>
+                {%- assign news = site.data.news | sort: 'date' %}
+                {%- assign count = 0 %}
                 <div class="news-list">
-                    <div class="news-item" onclick="redirectToNews('product-launch-2025')">
+                    {%- for new in news reversed %}
+                    <div class="news-item" onclick="redirectToNews('{{ new.url}}')">
                         <div class="news-header">
-                            <h3 class="news-title">Product Launch Announcement</h3>
-                            <div class="news-date">Jan 15, 2025</div>
+                            <h3 class="news-title">{{ new.name | escape }}</h3>
+                            <div class="news-date">{{ new.date | escape }}</div>
                         </div>
                         <div class="news-projects">
-                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('mobile-app')">Mobile App</span>
-                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('web-platform')">Web Platform</span>
-                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('api-v2')">API v2.0</span>
+                            {%- for participant in new.participants %}
+                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('{{ participant.url}}')">{{ participant.name | escape }}</span>
+                            {%- endfor %}
                         </div>
                         <div class="news-arrow">↗</div>
                     </div>
-                    
-                    <div class="news-item" onclick="redirectToNews('security-update-dec-2024')">
-                        <div class="news-header">
-                            <h3 class="news-title">Security Enhancement Update</h3>
-                            <div class="news-date">Dec 28, 2024</div>
-                        </div>
-                        <div class="news-projects">
-                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('authentication')">Authentication</span>
-                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('data-protection')">Data Protection</span>
-                        </div>
-                        <div class="news-arrow">↗</div>
-                    </div>
-                    
-                    <div class="news-item" onclick="redirectToNews('community-milestone-2024')">
-                        <div class="news-header">
-                            <h3 class="news-title">Community Milestone Reached</h3>
-                            <div class="news-date">Dec 20, 2024</div>
-                        </div>
-                        <div class="news-projects">
-                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('community-portal')">Community Portal</span>
-                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('user-engagement')">User Engagement</span>
-                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('feedback-system')">Feedback System</span>
-                        </div>
-                        <div class="news-arrow">↗</div>
-                    </div>
-                    
-                    <div class="news-item" onclick="redirectToNews('partnership-announcement-2024')">
-                        <div class="news-header">
-                            <h3 class="news-title">Strategic Partnership Announcement</h3>
-                            <div class="news-date">Dec 10, 2024</div>
-                        </div>
-                        <div class="news-projects">
-                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('integration-hub')">Integration Hub</span>
-                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('third-party-apis')">Third-party APIs</span>
-                        </div>
-                        <div class="news-arrow">↗</div>
-                    </div>
-                    
-                    <div class="news-item" onclick="redirectToNews('performance-improvements-2024')">
-                        <div class="news-header">
-                            <h3 class="news-title">Performance Improvements Released</h3>
-                            <div class="news-date">Nov 25, 2024</div>
-                        </div>
-                        <div class="news-projects">
-                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('backend-optimization')">Backend Optimization</span>
-                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('database-upgrade')">Database Upgrade</span>
-                            <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('caching-system')">Caching System</span>
-                        </div>
-                        <div class="news-arrow">↗</div>
-                    </div>
+                    {%- assign count = count | plus: 1 %}
+                    {%- if include.limit and count == include.limit %}
+                    {%- break %}
+                    {%- endif %}
+                    {%- endfor %}
                 </div>
             </div>
         </div>
@@ -202,19 +160,11 @@
     <script>
         function redirectToNews(newsId) {
             // Open news article in new tab
-            window.open(`/news/${newsId}`, '_blank');
-            
-            // Alternative: redirect to news page with query parameter
-            // window.open(`/news-details.html?id=${newsId}`, '_blank');
+            window.open(`${newsId}`, '_blank');
         }
         
-        function redirectToProject(projectId) {
-            // Redirect to project page
-            window.location.href = `/project/${projectId}`;
-            
-            // Alternative options:
-            // window.open(`/project/${projectId}`, '_blank'); // Open in new tab
-            // window.location.href = `/project-details.html?id=${projectId}`; // With query parameter
+        function redirectToProject(url) {
+            window.open(`${url}`, '_blank'); // Open in new tab
         }
     </script>
 </div>
