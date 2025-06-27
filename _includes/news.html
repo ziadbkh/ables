@@ -19,9 +19,11 @@
                             <div class="news-date">{{ new.date | escape }}</div>
                         </div>
                         <div class="news-projects">
+                            {% if new.participants %}
                             {%- for participant in new.participants %}
                             <span class="project-tag" onclick="event.stopPropagation(); redirectToProject('{{ participant.url}}')">{{ participant.name | escape }}</span>
                             {%- endfor %}
+                            {% endif %}
                         </div>
                         <div class="news-arrow">↗</div>
                     </div>
